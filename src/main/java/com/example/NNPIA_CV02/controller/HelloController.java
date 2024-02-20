@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/v1")
 /**
  * Controller slouží k vytváření webových controllerů které vrací pohledy, RestController zase vytváří service, které vrací JSON
+ * XML podporuje komplexní data např obtázky, grafy a další neprimitivní datové typy.
+ * JSON stringy, čísla, pole, boolean a objekty.
+ * YAML se užívá pro konfigurační složky
  */
 public class HelloController {
     @GetMapping("")
