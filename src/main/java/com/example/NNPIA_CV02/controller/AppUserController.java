@@ -41,8 +41,8 @@ public class AppUserController {
         return ResponseEntity.ok(user);
     }
 
-    @PostMapping(value = "/app-user-add")
-    public ResponseEntity<?> addNewUser(@RequestParam AppUser appUser) {
+    @PostMapping(value = "/app-user-add", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> addNewUser(@RequestBody AppUser appUser) {
         if (appUser != null) {
             repository.save(appUser);
             return ResponseEntity.ok().body("Sucessfully added new user");
